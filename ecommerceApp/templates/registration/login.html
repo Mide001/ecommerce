@@ -1,0 +1,28 @@
+{%load static%}
+{%load crispy_forms_tags%}
+{%block contents%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Form</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Shopping!!!</h1>
+            <div class="logo">
+                <img src="{% static 'images/shopping-bag.png' %}" alt="logo">
+            </div>
+            
+            <form action="" method="POST" class="p-3 mt-3">
+                {%csrf_token%}
+                {{form|crispy}}<br>
+                <button class="btn mt-3">Login Now</button><br>
+            </form>
+            <div class="text-center fs-6">
+                <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+            </div>
+        </div>
+    </body>
+</html>
+{%endblock%}

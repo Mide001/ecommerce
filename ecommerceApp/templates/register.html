@@ -1,0 +1,21 @@
+{%load static%}
+{%load crispy_forms_tags%}
+{%block contents%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regsteration Form</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Register With Us Today!!!</h1><br>
+            <form action="" method="POST">
+                {%csrf_token%}
+                {{form|crispy}}
+                <button class="button">Register Now</button>
+            </form>
+        </div>
+    </body>
+</html>
+{%endblock%}
